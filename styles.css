@@ -1,0 +1,151 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(45deg, #f3ec78, #af4261);
+  margin: 0;
+  font-family: "Arial", sans-serif;
+}
+
+.heading {
+  position: relative;
+  right: 13rem;
+  gap: 2rem;
+  display: grid;
+  color: black;
+  bottom: 10rem;
+  height: 30vh;
+  text-align: center;
+}
+
+.mail-link {
+  text-decoration: none;
+  top: -8px;
+  position: relative;
+}
+
+.mail-btn {
+  width: 140px;
+  height: 45px;
+  border-radius: 15%;
+  position: absolute;
+  top: 150%;
+
+  bottom: 0;
+  left: 27.5%;
+  background: #d4fdff;
+  border: 1.5px solid #2c00ff;
+}
+
+.calculator {
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  background: #fff;
+  width: 350px;
+  max-width: 100%;
+  position: relative;
+}
+
+.display {
+  background: #222;
+  padding: 20px;
+  color: #fff;
+  font-size: 2rem;
+  text-align: right;
+}
+
+.display input {
+  width: 100%;
+  border: none;
+  background: none;
+  color: inherit;
+  font-size: inherit;
+  text-align: inherit;
+  outline: none;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 20px;
+}
+
+button {
+  padding: 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  background: #f3f3f3;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background: #af4261;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+button:active {
+  transform: scale(1);
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.history {
+  background: #333;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  right: -350px;
+  width: 350px;
+  height: 100%;
+  overflow-y: auto;
+  transition: right 0.4s ease;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #444;
+  padding: 20px;
+  margin: 0;
+}
+
+.history-header h2 {
+  margin: 0;
+}
+
+.history-header button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background: #af4261;
+  color: #fff;
+  font-size: 1rem;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.history-header button:hover {
+  background: #f3ec78;
+  color: #333;
+}
+
+.history ul {
+  list-style: none;
+  padding: 0;
+}
+
+.history li {
+  padding: 15px;
+  border-bottom: 1px solid #444;
+}
+
+.history.show {
+  right: 0;
+}
